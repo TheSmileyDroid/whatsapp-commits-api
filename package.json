@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-commits-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/UltraGabriel77/whatsapp-commits-api.git",
+  "author": "<ghsilha@gmail.com>",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@open-wa/wa-automate": "^2.0.26"
+  },
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
