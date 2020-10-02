@@ -9,19 +9,28 @@ Se você estiver no windows, baixe do site oficial: [node download](https://node
 
 Você deve baixar esse repositório em seguida.
 Caso tenha o Git instalado use o comando abaixo:
+
 `
 git clone https://github.com/UltraGabriel77/whatsapp-commits-api.git
 `
+
+
 Caso não tenha o Git instalado baixe ele ou baixe esse repositório em zip no botão verde escrito *code*
 
 Então abra a pasta com o repositório digitando: 
+
 `cd ./whatsapp-commits-api`
 
+
 E instale todas as dependências com:
+
 `npm install`
 
+
 Execute o programa com o comando:
+
 `npm start`
+
 
 Quando aparecer o Qr code no terminal use ele como se fosse o whatsapp web
 
