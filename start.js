@@ -1,5 +1,6 @@
 const wa = require('@open-wa/wa-automate')
 const fs = require('fs')
+
 const readline = require('readline').createInterface({
   input: process.stdin,
   output: process.stdout
