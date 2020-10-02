@@ -1,5 +1,13 @@
 const wa = require('@open-wa/wa-automate')
-
+const fs = require('fs')
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+/**
+ * @type {object}
+ */
+var respostas = getRespostas()
 function whatsappBotStart () {
   wa.create().then(client => start(client))
 
@@ -12,11 +20,8 @@ function whatsappBotStart () {
    */
   function start (client) {
     client.onMessage(message => {
-      if (message.body === '###') {
-        client.sendText(message.from,
-          'O Naruto pode ser um pouco duro às vezes Talvez você não saiba disso Mas o Naruto também Cresceu sem pai Na verdade, ele nunca conheceu nenhum de seus pais ' +
-          'E nunca teve nenhum amigo em nossa aldeia Mesmo assim, eu nunca vi ele chorar Ficar zangado ou se dar por vencido Ele está sempre disposto a melhorar' +
-          'Ele quer ser respeitado, é o sonho dele E o Naruto daria a vida por isso sem hesitar Meu palpite é que ele se cansou de chorar E decidiu fazer alguma coisa a respeito')
+      if (respostas[message.body.toLowerCase] !== undefined) {
+        client.sendText(message.from, respostas[message.body])
       }
       if (message.body.includes('/roll')) {
         var value = 'resultados: '
@@ -38,6 +43,20 @@ function whatsappBotStart () {
         }
       }
     })
+    readline.on('line', (input) => {
+      if (input === 'update') {
+        respostas = getRespostas()
+        console.log(respostas)
+      }
+      readline.prompt()
+    })
   }
 }
+/**
+ * @returns {object}
+ */
+function getRespostas () {
+  return JSON.parse(fs.readFileSync('./respostas.json'))
+}
+
 exports.whatsappBotStart = whatsappBotStart
