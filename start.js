@@ -20,7 +20,7 @@ function whatsappBotStart () {
    */
   function start (client) {
     client.onMessage(message => {
-      if (respostas[message.body.toLowerCase] !== undefined) {
+      if (respostas[message.body.toLowerCase()] !== undefined) {
         client.sendText(message.from, respostas[message.body])
       }
       if (message.body.includes('/roll')) {
