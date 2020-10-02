@@ -1,6 +1,6 @@
 {
-  "/oi": "Bot: oi",
-  "/?": "Bot: Legal",
-  "/muda": "Bot: muda",
-  "/eike": "Eike"
+  "oi": "Bot: oi",
+  "?": "Bot: Legal",
+  "muda": "Bot: muda",
+  "eike": "Eike"
 }
