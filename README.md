@@ -17,6 +17,9 @@ git clone https://github.com/UltraGabriel77/whatsapp-commits-api.git
 
 Caso não tenha o Git instalado baixe ele ou baixe esse repositório em zip no botão verde escrito *code*
 
+![Imagem do botão](https://github.com/UltraGabriel77/whatsapp-commits-api/blob/master/Captura%20de%20tela%20de%202020-10-02%2019-10-43.png)
+
+
 Então abra a pasta com o repositório digitando: 
 
 `cd ./whatsapp-commits-api`
